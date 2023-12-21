@@ -6,6 +6,9 @@ import { MemberDetailComponent } from './members/member-detail/member-detail.com
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { authGuard } from './_guards/auth.guard';
+import { TestErrorsComponent } from './Errors/test-error/test-errors.component';
+import { NotFoundComponent } from './Errors/_not-found/not-found.component';
+import { ServerErrorComponent } from './Errors/_server-error/server-error.component';
 
 const routes: Routes = [
 
@@ -20,7 +23,10 @@ children:[
   {path:'messages', component:MessagesComponent},
 ]
 },
-{path:'**', component:HomeComponent,pathMatch:'full'},
+{path: 'errors',component:TestErrorsComponent},
+{path: 'not-found',component:NotFoundComponent},
+{path: 'server-error',component:ServerErrorComponent},
+{path:'**', component:NotFoundComponent,pathMatch:'full'},
 
 
 ];

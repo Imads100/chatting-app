@@ -26,9 +26,6 @@ model:any = {}
       this.router.navigateByUrl('/members');
       console.log(respons);
       
-    }, error=>{
-      console.log(error);
-      this.tosta.error(error.error);
     })
   }
 
