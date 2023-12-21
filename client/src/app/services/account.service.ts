@@ -30,13 +30,18 @@ return this.http.post(this.baseUrl + 'Account/Login',model).pipe(map((response:U
 }) );
 }
 
-
+is_login(){
+  if(localStorage.getItem('user'))
+return true;
+else 
+return false;
+}
 
 register(model:User)
 {
 return this.http.post(this.baseUrl+'Account/register',model).pipe(map((respons:User)=>
 {
-  const user = respons;
+  const user = respons; 
   if(user)
 {
   localStorage.setItem('user',JSON.stringify(user));
