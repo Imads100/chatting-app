@@ -477,6 +477,7 @@ $RECYCLE.BIN/
 *.lnk
 
 appsettings.Development.json
+
 appsettings.json
 ssl
 
